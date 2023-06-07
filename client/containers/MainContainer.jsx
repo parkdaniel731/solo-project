@@ -1,9 +1,14 @@
 import React from "react";
+import TableContainer from './TableContainer.jsx';
+import HandContainer from './HandContainer.jsx';
+import ScoreContainer from './ScoreContainer.jsx';
 
 const MainContainer = () => {
   return (
     <div>
-      hola
+      <TableContainer />
+      <HandContainer />
+      <ScoreContainer />
     </div>
   );
 };
