@@ -3,8 +3,7 @@ import React from "react";
 function App() {
   return (
     <div>
-      <h1>Hwatu Go Stop</h1>
-      {/* <Table /> */}
+      <h1>HWATU BABYYY</h1>
     </div>
   );
 }
