@@ -1,3 +1,6 @@
+const SUITS = ['jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul', 'aug', 'sep', 'oct', 'nov', 'dec'];
+const TYPES = ['bright', 'animal', 'ribbon', 'junk'];
+
 const card = {
   id: 1,
   suit: 'jan',
@@ -65,3 +68,14 @@ const brightPoints = () => {};
 const animalPoints = () => {};
 const ribbonPoints = () => {};
 const junkPoints = () => {};
+
+const shuffle = (arg) => {
+  const shuffledDeck = arg;
+  for (let i = 48; i > 0; i --) {
+    const newIndex = Math.floor(Math.random() * (i + 1));
+    const oldValue = shuffledDeck[newIndex];
+    shuffledDeck[newIndex] = shuffledDeck[i];
+    shuffledDeck[i] = oldValue;
+  }
+  return shuffledDeck;
+};
