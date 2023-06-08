@@ -5,7 +5,7 @@ import ScoreContainer from './ScoreContainer.jsx';
 
 const MainContainer = () => {
   return (
-    <div>
+    <div className="main-container">
       <TableContainer />
       <HandContainer />
       <ScoreContainer />

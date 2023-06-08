@@ -1,4 +1,5 @@
 import React from "react";
+import Card from '../components/Card.jsx';
 
 const ScoreContainer = () => {
   return (
@@ -16,10 +17,10 @@ const ScoreContainer = () => {
         <span>junk</span>
       </div>
       <div className="player3-score-container">
-        <span>bright</span>
-        <span>animal</span>
-        <span>ribbon</span>
-        <span>junk</span>
+        <Card />
+        <Card />
+        <Card />
+        <Card />
       </div>
     </div>
   );

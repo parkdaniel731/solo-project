@@ -1,26 +1,24 @@
 import React from "react";
+import Card from '../components/Card.jsx';
 
 const TableContainer = () => {
   return (
     <div className="table-container">
       <div className="jan-jun-container">
-        <span>jan</span>
-        <span>feb</span>
-        <span>mar</span>
-        <span>apr</span>
-        <span>may</span>
-        <span>jun</span>
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
       </div>
       <div className="deck-container">
-        <span>deck</span>
+        <button onClick={() => console.log('clicked!')} className="new-game-button">New Game</button>
+        <img id="card-back" src="../images/card-back.png" alt="" />
       </div>
       <div className="jul-dec-container">
-        <span>jul</span>
-        <span>aug</span>
-        <span>sep</span>
-        <span>oct</span>
-        <span>nov</span>
-        <span>dec</span>
+        <Card />
+        <Card />
       </div>
     </div>
   );

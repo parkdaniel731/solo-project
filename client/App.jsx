@@ -1,10 +1,11 @@
 import React from "react";
-import MainContainer from './containers/MainContainer.jsx';
+import MainContainer from './containers/MainContainer.jsx'
 
 function App() {
   return (
-    <div>
+    <div id="app">
       <h1>HWATU BABYYY</h1>
+      {/* <button className="new-game-button">New Game</button> */}
       <MainContainer />
     </div>
   );

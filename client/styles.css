@@ -1,8 +1,104 @@
-/* body {
+body {
   margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.5em;
+  text-align: center;
+  background: #1b1523;
+  color: #fff;
+  /* height: 100vh; */
+}
+
+
+#card-front {
+  height: 100px;
+  width: auto;
+}
+
+#card-back {
+  height: auto;
+  width: 70px
+}
+
+
+/* #root {
+  height: 100vh;
 } */
 
+
+/* #app {
+  height: 100vh;
+} */
+
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+
 .table-container {
+  background-color: lightblue;
+  display: flex;
+  width: 100vw;
+  flex: 4;
+  justify-content: space-around;
+}
+.jan-jun-container,
+.jul-dec-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  flex: 4;
+  gap: 10px;
+  margin-top: 20px;
+}
+.deck-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 8%;
+}
+.new-game-button {
+  background: none;
+  border: 2px solid #fff;
+  padding: 6px 12px;
+  border-radius: 4px;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 0.75em;  
+}
+.new-game-button:hover {
+  background: #b82455;
+  color: #fff;
+}
+
+
+.hand-container {
+  display: flex;
+  flex: 1;
+}
+.player-hand {
+  background-color: lightcoral;
+  display: flex;
+  flex: 1;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+
+.score-container {
+  background-color: lightgreen;
+  display: flex;
+  flex: 1;
+  justify-content: space-around;
+  align-items: center;
+}
+.player1-score-container,
+.player2-score-container,
+.player3-score-container {
   display: flex;
   justify-content: space-around;
 }

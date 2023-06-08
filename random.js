@@ -79,3 +79,10 @@ const shuffle = (arg) => {
   }
   return shuffledDeck;
 };
+
+/*
+State that I need:
+  - Deck of card = array of objects that have the card properties
+  - the left and right containers displaying cards
+  - the deck of cards showing when you press new game
+ */
