@@ -6,26 +6,10 @@ const TableContainer = ({ deck, setDeck }) => {
   const [tableCards, setTableCards] = useState([]);
 
   function startNewGame() {
-
+    shuffleCards(deck);
+    dealCardsToTable();
   }
-
-  function dealCardsToTable() {
-    const shuffledDeck = structuredClone(deckOfCards);
-
-    const arr = [];
-
-    for (let i = 0; i < 7; i++) {
-      const topOfDeck = shuffledDeck.pop();
-      arr.push(<Card />);
-    }
-
-    setTableCards(arr);
-  }
-
-  function dealCardsToHand() {
-
-  }
-
+  
   function shuffleCards(deckOfCards) {
     // const shuffledDeck = JSON.parse(JSON.stringify(deck)); <- old method, trying the new cloning thing available
     const shuffledDeck = structuredClone(deckOfCards);
@@ -42,27 +26,34 @@ const TableContainer = ({ deck, setDeck }) => {
     setDeck(shuffledDeck);
   }
 
+  function dealCardsToTable() {
+    const shuffledDeck = structuredClone(deckOfCards);
+
+    const arr = [];
+
+    for (let i = 0; i < 7; i++) {
+      const topOfDeck = shuffledDeck.pop();
+      arr.push(<Card key={topOfDeck.cardID} card-id={topOfDeck.cardID} src={topOfDeck.src} alt={topOfDeck.alt} />);
+    }
+
+    setTableCards(arr);
+  }
+
+  function dealCardsToHand() {
+
+  }
+
     return (
     <div className="table-container">
       <div className="left-table">
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
+        {tableCards}
       </div>
       <div className="deck-container">
-        <button onClick={() => shuffleCards(deck)} className="new-game-button">New Game</button>
+        <button onClick={() => startNewGame()} className="new-game-button">New Game</button>
         <img id="card-back" src="../images/card-back.png" alt="" />
       </div>
       <div className="right-table">
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
+        {/* <Card key={deck[3].cardID} card-id={deck[3].cardID} src={deck[3].src} alt={deck[3].alt} /> */}
       </div>
     </div>
   );
