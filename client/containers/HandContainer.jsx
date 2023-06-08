@@ -1,6 +1,8 @@
 import React from "react";
 
 const HandContainer = () => {
+  // const [handCards, setHandCards] = useState([]);
+
   return (
     <div className="hand-container">
       <div className="player-hand">

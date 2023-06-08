@@ -85,4 +85,33 @@ State that I need:
   - Deck of card = array of objects that have the card properties
   - the left and right containers displaying cards
   - the deck of cards showing when you press new game
+  - Global deck variable or state for deck?
+  - const [tableCards, setTableCards] = useState([]);?
+  - const [handCards, setHandCards] = useState([]);?
+  - const [scoreCards, setScoreCards] = useState([]);?
+  - object for players and their scores?
+
+- Need reset game function that runs when new game is pressed
+  - This should reset the deck to be the full 48 cards
+  - shuffle the cards
+
+Component Tree
+- MainContainer
+  - TableContainer
+    - left-table
+    - deck container
+      - New Game button
+    - right-table
+  - HandContainer
+    - player1-hand 
+  - ScoreContainer 
+    - player1-score-container
+    - player2-score-container
+    - player3-score-container
+
+Flow of Game:
+- Blank Screen
+- Press new game
+- 6 Cards to the table
+- 7 Cards to the hand
  */

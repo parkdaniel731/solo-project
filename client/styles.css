@@ -16,7 +16,8 @@ body {
 
 #card-back {
   height: auto;
-  width: 70px
+  width: 70px;
+  border-radius: 6px;
 }
 
 
@@ -44,8 +45,8 @@ body {
   flex: 4;
   justify-content: space-around;
 }
-.jan-jun-container,
-.jul-dec-container {
+.left-table,
+.right-table {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
