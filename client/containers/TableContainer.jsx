@@ -5,6 +5,7 @@ import Card from '../components/Card.jsx';
 
 const TableContainer = ({ deck, setDeck }) => {
   const [tableCards, setTableCards] = useState([]);
+  const [handCards, setHandCards] = useState([]);
 
   function startNewGame() {
     // console.log('From startNewGame before the functions, here is deck:', deck);
@@ -46,7 +47,18 @@ const TableContainer = ({ deck, setDeck }) => {
   }
 
   function dealCardsToHand() {
-    
+    const shuffledDeck = structuredClone(deck);
+    // console.log('From dealCardsToTable, here is deck:', shuffledDeck);
+
+    const arr = [];
+
+    for (let i = 0; i < 7; i++) {
+      const topOfDeck = shuffledDeck.pop();
+      arr.push(<Card key={topOfDeck.cardID} card-id={topOfDeck.cardID} src={topOfDeck.src} alt={topOfDeck.alt} />);
+    }
+
+    setHandCards(arr);
+    setDeck(shuffledDeck);
   }
 
 
@@ -57,12 +69,15 @@ const TableContainer = ({ deck, setDeck }) => {
       </div>
       <div className="deck-container">
         <button onClick={() => startNewGame()} >Shuffle Cards</button>
-        <button onClick={() => dealCardsToTable()} >Deal</button>
+        <button onClick={() =>{
+          dealCardsToTable();
+          dealCardsToHand();
+        }} >Deal</button>
         {/* <button onClick={() => dealCardsToTable()} >Reset Game</button> */}
         <img id="card-back" src="../images/card-back.png" alt="" />
       </div>
       <div className="right-table">
-        {/* <Card key={deck[3].cardID} card-id={deck[3].cardID} src={deck[3].src} alt={deck[3].alt} /> */}
+        {tableCards}
       </div>
     </div>
   );
