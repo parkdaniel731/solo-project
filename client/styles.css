@@ -61,7 +61,7 @@ body {
   align-items: center;
   margin-bottom: 8%;
 }
-.new-game-button {
+button {
   background: none;
   border: 2px solid #fff;
   padding: 6px 12px;
@@ -71,7 +71,7 @@ body {
   cursor: pointer;
   font-size: 0.75em;  
 }
-.new-game-button:hover {
+button:hover {
   background: #b82455;
   color: #fff;
 }
@@ -102,4 +102,5 @@ body {
 .player3-score-container {
   display: flex;
   justify-content: space-around;
+  gap: 1.5vw;
 }

@@ -56,7 +56,7 @@ const MainContainer = () => {
     { cardID: 47, suit: 'dec', type: 'double-junk', src: '../images/dec-double-junk-card.png', alt: 'december double junk card' }
   ]);
 
-  console.log('Current state of the deck:', deck);
+  console.log('From MainContainer, here is deck:', deck);
 
   return (
     <div className="main-container">
