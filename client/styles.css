@@ -52,7 +52,7 @@ body {
 
 
 .table-container {
-  background-color: lightblue;
+  /* background-color: lightblue; */
   display: flex;
   width: 100vw;
   flex: 4;
@@ -95,7 +95,7 @@ button:hover {
   flex: 1;
 }
 .player-hand {
-  background-color: lightcoral;
+  /* background-color: lightcoral; */
   display: flex;
   flex: 1;
   justify-content: space-evenly;
@@ -104,7 +104,7 @@ button:hover {
 
 
 .score-container {
-  background-color: lightgreen;
+  /* background-color: lightgreen; */
   display: flex;
   flex: 1;
   justify-content: space-around;

@@ -42,7 +42,10 @@ const TableContainer = ({ deck, setDeck, tableCards, setTableCards, handCards, s
         <img id="card-back" src="../images/card-back.png" alt="" />
       </div>
       <div className="right-table">
-        {/* {tableCards} */}
+        {/* <Card key={16000} card-id={'placeholder16'} src={'../images/nickyoung.png'} alt={'place holder'} />
+        <Card key={17000} card-id={'placeholder17'} src={'../images/nickyoung.png'} alt={'place holder'} />
+        <Card key={18000} card-id={'placeholder18'} src={'../images/nickyoung.png'} alt={'place holder'} />
+        <Card key={19000} card-id={'placeholder19'} src={'../images/nickyoung.png'} alt={'place holder'} /> */}
       </div>
     </div>
   );
