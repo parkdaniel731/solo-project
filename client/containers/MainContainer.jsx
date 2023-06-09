@@ -55,13 +55,15 @@ const MainContainer = () => {
     { cardID: 46, suit: 'dec', type: 'junk', src: '../images/dec-junk-card.png', alt: 'december junk card' },
     { cardID: 47, suit: 'dec', type: 'double-junk', src: '../images/dec-double-junk-card.png', alt: 'december double junk card' }
   ]);
+  const [tableCards, setTableCards] = useState([]);
+  const [handCards, setHandCards] = useState([]);
 
   console.log('From MainContainer, here is deck:', deck);
 
   return (
     <div className="main-container">
-      <TableContainer deck={deck} setDeck={setDeck}/>
-      <HandContainer />
+      <TableContainer deck={deck} setDeck={setDeck} tableCards={tableCards} setTableCards={setTableCards} handCards={handCards} setHandCards={setHandCards} />
+      <HandContainer handCards={handCards} />
       <ScoreContainer />
     </div>
   );
